@@ -6,7 +6,7 @@ const ApiRequest = (longUrl) => {
   axios
     .post("https://api-ssl.bitly.com/v4/shorten", longUrl, {
       headers: {
-        Authorization: `Bearer 07c7b386d2e694682665af85ab6c08de2a7ec18d`,
+        Authorization: `Bearer ${process.env.REACT_APP_BITLY_API_KEY}`,
         "Content-Type": "application/json",
       },
     })
